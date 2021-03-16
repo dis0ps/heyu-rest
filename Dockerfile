@@ -1,7 +1,6 @@
 FROM python:3-slim-buster
 
-
-RUN useradd heyu && mkdir -p /home/heyu/app && chown -R heyu.heyu /home/heyu
+RUN useradd -G dialout heyu && mkdir -p /home/heyu/app && chown -R heyu.heyu /home/heyu
 
 RUN mkdir -p /usr/local/etc/heyu && echo "TTY /dev/ttyUSB0" > /usr/local/etc/heyu/x10.conf
 RUN mkdir -p  /usr/local/var/tmp/heyu && mkdir -p /usr/local/var/lock
