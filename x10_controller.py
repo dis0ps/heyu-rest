@@ -1,10 +1,10 @@
 import subprocess
 
+
 class x10_controller:
 
     def __init__(self, heyu_path):
         self.heyu_bin = heyu_path
-
 
     def __run_heyu(self, command_arguments):
 
